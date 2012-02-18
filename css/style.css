@@ -93,3 +93,7 @@ body {
 #keyboard #outer_bot_right {
     background: #0ff;
 }
+
+#keyboard .on {
+    display: none;
+}
