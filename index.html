@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<!--Todo
+    Still needs bottom middle section
+-->
+
+<html>
+    <head>
+        <title>Eye Gaze Keyboard</title>
+        <link rel="stylesheet" type/"text/css" href="css/style.css" />
+    </head>
+
+    <body>
+        The keyboard goes in here.
+
+        <div id="container">
+            <textarea id="write" rows="6" cols="60"></textarea>
+            <ul id="keyboard">
+                <li class="outer" id="outer_top_left"><span class="off">
+                    <ul id="topleft">
+                        <li class="inner" id="inner_top_left">g</li>
+                        <li class="inner" id="inner_top_mid">h</li>
+                        <li class="inner" id="inner_top_right">i</li>
+                        <li class="inner" id="inner_bot_left">f</li>
+                        <li class="inner" id="inner_bot_mid"> </li>
+                        <li class="inner" id="inner_bot_right">j</li>
+                    </ul>
+                </span><span class="on"></span></li>
+
+                <li class="outer" id="outer_top_mid"><span class="off">
+                    <ul id="topleft">
+                        <li class="inner" id="inner_top_left">l</li>
+                        <li class="inner" id="inner_top_mid">m</li>
+                        <li class="inner" id="inner_top_right">n</li>
+                        <li class="inner" id="inner_bot_left">k</li>
+                        <li class="inner" id="inner_bot_mid"> </li>
+                        <li class="inner" id="inner_bot_right">o</li>
+                    </ul>
+                </span><span class="on"></span></li>
+
+                <li class="outer" id="outer_top_right"><span class="off">
+                    <ul id="topleft">
+                        <li class="inner" id="inner_top_left">q</li>
+                        <li class="inner" id="inner_top_mid">r</li>
+                        <li class="inner" id="inner_top_right">s</li>
+                        <li class="inner" id="inner_bot_left">p</li>
+                        <li class="inner" id="inner_bot_mid"> </li>
+                        <li class="inner" id="inner_bot_right">t</li>
+                    </ul>
+                </span><span class="on"></span></li>
+
+                <li class="outer" id="outer_bot_left"><span class="off">
+                    <ul id="topleft">
+                        <li class="inner" id="inner_top_left">b</li>
+                        <li class="inner" id="inner_top_mid">c</li>
+                        <li class="inner" id="inner_top_right">d</li>
+                        <li class="inner" id="inner_bot_left">a</li>
+                        <li class="inner" id="inner_bot_mid"> </li>
+                        <li class="inner" id="inner_bot_right">e</li>
+                    </ul>
+                </span><span class="on"></span></li>
+
+                <li class="outer" id="outer_bot_right"><span class="off">
+                    <ul id="topleft">
+                        <li class="inner" id="inner_top_left">v</li>
+                        <li class="inner" id="inner_top_mid">w</li>
+                        <li class="inner" id="inner_top_right">x</li>
+                        <li class="inner" id="inner_bot_left">u</li>
+                        <li class="inner" id="inner_bot_mid">y</li>
+                        <li class="inner" id="inner_bot_right">z</li>
+                    </ul>
+                </span><span class="on"></span></li>
+            </ul>
+        </div>
+
+        <script type="text/javascript" src='http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+        <script type="text/javascript" src="js/eyg.js"></script>
+    </body>
+</html>
