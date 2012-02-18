@@ -6,3 +6,10 @@ Gaze input method.
 
 At the moment, it is being coded in javascript, but with an eye toward a future
 android implementation this may change. 
+
+
+####Updates:
+
+As you may be able to tell, some of the html and css has been implemented.
+I have also realized that it will be necessary to create a mobile version that
+is somewhat scaled/down
