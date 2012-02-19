@@ -13,41 +13,23 @@ $(function(){
     var bot_right = new Array("v","w","x","u","y","z");
 
     $('#keyboard .outer').click(function(){
+        $this = $(this);
+        console.log($this);
         if (is_on) {
-            //$('.off').animate({
-                //'opacity' : 'toggle',
-            //});
-            //$('.on').animate({
-                //'opacity' : 'toggle',
-            //});
+            if ($this.is('#outer_top_left')) {
+                console.log("yes");
+                $('.off').replaceWith('B');
+            }
             $('.off').show();
             $('.on').hide();
             is_on = false;
         } else {
-            //$('.off').animate({
-                //'opacity' : 'toggle',
-            //});
-            //$('.on').animate({
-                //'opacity' : 'toggle',
-            //});
             $('.off').hide();
             $('.on').show();
             is_on = true;
         }
             
-
-        
-        
-        
-    //$('#keyboard .inner').click(function(){
-        //var $this = $(this),
-            //character = $this.html();
-        
-    //console.log($this.html());
-        //$write.html($write.html() + character);
     });
-
-
         
 });
     
