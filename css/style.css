@@ -70,6 +70,14 @@ body {
     -webkit-border-radius: 7px;
 }
 
+#keyboard .off {
+    margin: 5px 5px 5px 5px;
+    font: 315%/1.5 Verdana, Sans-Serif;
+    line-height:100px;
+    text-align: center;
+
+}
+
 #keyboard #outer_top_left {
     background: #f00;
 }
@@ -94,6 +102,3 @@ body {
     background: #0ff;
 }
 
-#keyboard .on {
-    display: none;
-}
