@@ -10,6 +10,8 @@ android implementation this may change.
 
 ####Updates:
 
+* Keyboard now has rudimentary function, most added things will be features
+
 * Added inital javascript, this is not the eventual intended function, but
   a placeholder for later.
 
