@@ -14,7 +14,7 @@ body {
 }
 
 #write {
-    margin: 0 0 25px;
+    margin: 0 0 5px;
     padding: 5px;
     width: 630px;
     height: 200px;
@@ -25,13 +25,41 @@ body {
     -webkit-border-radius: 5px;
 }
 
+
 #keyboard {
     margin: 0;
     font: 200%/1.5 Verdana, Sans-Serif;
     padding: 0;
     list-style: none;
+    clear:both;
 }
 
+#numpad {
+    clear:both;
+    float: left;
+    margin: 0 0 5px;
+    font: 200%/1.5 Verdana, Sans-Serif;
+    padding: 0;
+    list-syle: none;
+}
+
+#numpad li {
+    list-style-type: none;
+}
+
+#numpad .inner {
+    float: left;
+    margin: 5px 5px 1px 0px;
+    width: 60px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background: #fff;
+    border 1px solid #f9f9f9;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+
+}
 #keyboard li {
     list-style-type: none;
 }
