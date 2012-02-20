@@ -10,6 +10,9 @@ android implementation this may change.
 
 ####Updates:
 
+* Can now do most basic text editing for alpha. Deciding now what will be the
+  best way to implement numbers.
+
 * Keyboard now has rudimentary function, most added things will be features
 
 * Added inital javascript, this is not the eventual intended function, but
