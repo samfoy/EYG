@@ -9,7 +9,6 @@ capslock = false;
 function doUpper() {
     $('.letter').each(function() {
         $this = $(this);
-        console.log($this);
         var text = $this.text();
         text = text.toUpperCase();
         $(this).text(text);
@@ -18,7 +17,6 @@ function doUpper() {
 
 function doLower() {
     $('.letter').each(function() {
-        console.log('lowering');
         $this = $(this);
         var text = $this.text();
         text = text.toLowerCase();
@@ -86,8 +84,6 @@ $('#keyboard .outer').click(function(){
         shift = false;
     } else {
         text = $($(this).children('.off')).html();
-        console.log(text);
-        console.log($this);
         if ($this.hasClass('delete')) { 
             var html = $write.html();
             $write.html(html.substr(0, html.length -1));
