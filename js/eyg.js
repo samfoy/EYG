@@ -1,5 +1,6 @@
 $(function(){
   $('.off').hide();
+  $('.shifted').hide();
   var is_on = true;
   var text;
   var $write = $('#write'),
@@ -7,6 +8,9 @@ shift = false,
 capslock = false;
 
 function doUpper() {
+  $('.unshifted').hide();
+  $('.shifted').show();
+  $('.shift').removeClass('shift');
   $('.letter').each(function() {
     $this = $(this);
     var text = $this.text();
@@ -24,12 +28,18 @@ function doLower() {
   });
 }
 
-$('#numpad .inner .on').click(function(){
+$('#numpad .inner ').click(function(){
   $this = $(this);
-  console.log($this);
-  text = $this.text();
-  console.log(text);
+  if (shift) {
+    text = $this.children('.shifted').text();
+  } else {
+    text = $this.children('.unshifted').text();
+  }
+  //text = $this.text();
   $write.html($write.html() + text);
+  $('.shifted').hide();
+  $('.unshifted').show();
+  shift = false;
 });
 
 $('#keyboard .outer').click(function(){
