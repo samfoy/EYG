@@ -28,6 +28,54 @@ function doLower() {
   });
 }
 
+function doBracket() {
+  $('#outer_top_left .off').html('(');
+  $('#outer_top_mid .off').html(')');
+  $('#outer_top_right .off').html('[');
+  $('#outer_bot_left .off').html(']');
+  $('#outer_bot_mid .off').html("{");
+  $('#outer_bot_right .off').html('}');
+  $('.on').hide();
+  $('.off').show();
+  $('.bracket').removeClass('bracket');
+}
+
+function doPunc() {
+  $('#outer_top_left .off').html(';');
+  $('#outer_top_mid .off').html(':');
+  $('#outer_top_right .off').html('<');
+  $('#outer_bot_left .off').html('>');
+  $('#outer_bot_mid .off').html("'");
+  $('#outer_bot_right .off').html('"');
+  $('.on').hide();
+  $('.off').show();
+  $('.punc').removeClass('punc');
+}
+
+function doMath() {
+  $('#outer_top_left .off').html('+');
+  $('#outer_top_mid .off').html('-');
+  $('#outer_top_right .off').html('/');
+  $('#outer_bot_left .off').html('*');
+  $('#outer_bot_mid .off').html('=');
+  $('#outer_bot_right .off').html('|');
+  $('.on').hide();
+  $('.off').show();
+  $('.math').removeClass('math');
+}
+
+function doExtra() {
+  $('#outer_top_left .off').html('~');
+  $('#outer_top_mid .off').html('`');
+  $('#outer_top_right .off').html('\\');
+  $('#outer_bot_left .off').html('\\t');
+  $('#outer_bot_mid .off').html('');
+  $('#outer_bot_right .off').html('_');
+  $('.on').hide();
+  $('.off').show();
+  $('.extra').removeClass('extra');
+}
+
 $('#numpad .inner ').click(function(){
   $this = $(this);
   if (shift) {
@@ -50,28 +98,32 @@ $('#keyboard .outer').click(function(){
       $('#outer_top_mid .off').html('h');
       $('#outer_top_right .off').html('i');
       $('#outer_bot_left .off').html('f');
-      $('#outer_bot_mid .off').html('');
+      $('#outer_bot_mid .off').html(';');
+      $('#outer_bot_mid').addClass('punc');
       $('#outer_bot_right .off').html('j');
     } else if ($this.is('#outer_top_mid')) {
       $('#outer_top_left .off').html('l');
       $('#outer_top_mid .off').html('m');
       $('#outer_top_right .off').html('n');
       $('#outer_bot_left .off').html('k');
-      $('#outer_bot_mid .off').html('');
+      $('#outer_bot_mid .off').html('+');
+      $('#outer_bot_mid').addClass('math');
       $('#outer_bot_right .off').html('o');
     } else if ($this.is('#outer_top_right')) {
       $('#outer_top_left .off').html('q');
       $('#outer_top_mid .off').html('r');
       $('#outer_top_right .off').html('s');
       $('#outer_bot_left .off').html('p');
-      $('#outer_bot_mid .off').html('');
+      $('#outer_bot_mid .off').html('(');
+      $('#outer_bot_mid').addClass('bracket');
       $('#outer_bot_right .off').html('t');
     } else if ($this.is('#outer_bot_left')) {
       $('#outer_top_left .off').html('b');
       $('#outer_top_mid .off').html('c');
       $('#outer_top_right .off').html('d');
       $('#outer_bot_left .off').html('a');
-      $('#outer_bot_mid .off').html('');
+      $('#outer_bot_mid .off').html('~');
+      $('#outer_bot_mid').addClass('extra');
       $('#outer_bot_right .off').html('e');
     } else if ($this.is('#outer_bot_mid')) {
       $('#outer_top_left .off').html('.');
@@ -103,13 +155,25 @@ $('#keyboard .outer').click(function(){
   } else {
     text = $($(this).children('.off')).html();
     if ($this.hasClass('delete')) { 
-      var html = $write.html();
+      var html = $write.text();
       $write.html(html.substr(0, html.length -1));
     } else if ($this.hasClass('shift')) {
       shift = true;
       doUpper();
     } else if ($this.hasClass('return')) {
       $write.html($write.html() + "\n");
+    } else if ($this.hasClass('math')) {
+      doMath();
+      return;
+    } else if ($this.hasClass('punc')) {
+      doPunc();
+      return;
+    } else if ($this.hasClass('bracket')) {
+      doBracket();
+      return;
+    } else if ($this.hasClass('extra')) {
+      doExtra();
+      return;
     } else {
       $write.html($write.html() + text);
     }
@@ -119,6 +183,10 @@ $('#keyboard .outer').click(function(){
     $('.shift').removeClass('shift');
     $('.delete').removeClass('delete');
     $('.return').removeClass('return');
+    $('.math').removeClass('math');
+    $('.punc').removeClass('punc');
+    $('.bracket').removeClass('bracket');
+    $('.extra').removeClass('extra');
 
     if(!shift) {
       doLower();
