@@ -58,7 +58,6 @@ body {
   border 1px solid #f9f9f9;
   -moz-border-radius: 7px;
   -webkit-border-radius: 7px;
-
 }
 #keyboard li {
   list-style-type: none;
@@ -103,7 +102,6 @@ body {
   font: 315%/1.5 Verdana, Sans-Serif;
   line-height:100px;
   text-align: center;
-
 }
 
 #keyboard #outer_top_left {

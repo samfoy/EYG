@@ -106,7 +106,6 @@ $('#keyboard .outer').click(function(){
       doLower();
     }
 
-
     is_on = true;
   }
 
