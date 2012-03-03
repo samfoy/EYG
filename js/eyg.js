@@ -24,6 +24,14 @@ function doLower() {
   });
 }
 
+$('#numpad .inner .on').click(function(){
+  $this = $(this);
+  console.log($this);
+  text = $this.text();
+  console.log(text);
+  $write.html($write.html() + text);
+});
+
 $('#keyboard .outer').click(function(){
   $this = $(this);
   if (is_on) {
