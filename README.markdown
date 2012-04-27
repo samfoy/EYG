@@ -4,11 +4,12 @@
 Eye Gaze Keyboard is a touch optimized text entry interface based upon the Eye
 Gaze input method.
 
-At the moment, it is being coded in javascript, but with an eye toward a future
-android implementation this may change. 
 
 
 ####Updates:
+
+* EYG is now fully functional. It can be used for most text editing purposes.
+  I would like to speed it up but that doesn't seem possible in this form.
 
 * Can now do most basic text editing for alpha. Deciding now what will be the
   best way to implement numbers.
